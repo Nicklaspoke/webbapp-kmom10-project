@@ -24,7 +24,7 @@ let auth = {
         };
 
         return m.request({
-            url: utils.base_url + "/login",
+            url: utils.auth_url + "/login",
             method: "POST",
             data: payload
         }).then(function(result) {

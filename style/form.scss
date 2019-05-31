@@ -1,0 +1,28 @@
+// form.scss, for styling of forms in the webapp
+
+.input {
+    font-size: $defaultSize;
+    line-height: $lineHeight;
+    font-family: $fontBody;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    padding: 0.6rem 0.6rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1.4rem;
+}
+
+.input-label {
+    font-weight: bold;
+    margin: 2rem 0 0 0;
+    display: block;
+}
+
+.input-label::after {
+    content: ":";
+}
+
+.input:focus {
+    background-color: #ddd;
+}

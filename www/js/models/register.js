@@ -34,7 +34,7 @@ let registerAccount = {
             };
 
             m.request({
-                url: utils.base_url + "/register",
+                url: utils.auth_url + "/register",
                 method: "POST",
                 data: payload
             }).then(function() {

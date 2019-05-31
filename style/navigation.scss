@@ -1,0 +1,53 @@
+/* navigation.scss */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background: white;
+    display: flex;
+    flex-flow: row "||" nowrap;
+    justify-content: space-evenly;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 0.2rem 1rem;
+    background: #eee;
+    text-align: center;
+    box-sizing: border-box;
+
+    .right-link {
+        float: right;
+    }
+}
+
+.bottom-nav a,
+.top-nav a {
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+}
+
+.bottom-nav a.active,
+.top-nav a.active {
+    color: #4e75ba;
+}
+
+.bottom-nav i,
+.top-nav i {
+    display: block;
+}
+
+.bottom-nav span,
+.top-nav span {
+    font-size: 0.7rem;
+}

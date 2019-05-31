@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import 'normalize.min';
+@import 'variables';
+@import 'typography';
+@import 'navigation';
+@import 'content';
+@import 'buttons';
+@import 'form';
+@import 'table';
+
+
+/* Adding fontawesome to the style*/
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/solid.scss";

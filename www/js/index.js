@@ -22,7 +22,9 @@ import m from 'mithril';
 import layout from "./views/layout.js";
 import home from "./views/home.js";
 import login from "./views/login.js";
+import register from "./views/register.js";
 import auth from "./models/auth.js";
+import spaceX from './views/spaceX.js';
 
 
 var app = {
@@ -43,9 +45,15 @@ var app = {
                 }
             },
 
+            "/spaceX": {
+                render: function() {
+                    return m(layout, m(spaceX))
+                }
+            },
+
             "/login": {
                 render: function() {
-                    return m(layout, m(login));
+                    return m(layout, m(login))
                 }
             },
 

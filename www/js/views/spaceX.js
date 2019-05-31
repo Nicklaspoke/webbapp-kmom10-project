@@ -9,3 +9,5 @@ let spaceX = {
         ])
     }
 }
+
+export default spaceX;

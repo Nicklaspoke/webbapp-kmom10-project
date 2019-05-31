@@ -1,0 +1,57 @@
+.container {
+    padding: 1rem;
+    margin-bottom: 3.2rem;
+    margin-top: 2rem;
+}
+
+.deliveryContainer {
+    margin-top: 0.2rem;
+    border-top: 0.1rem solid #333;
+}
+
+.dropdown-menu {
+    width: 100%;
+    padding: 0.6rem 0.6rem;
+    background-color: #ddd;
+}
+
+.modal {
+    position: absolute;
+    margin: auto;
+    padding: 1rem;
+    max-width: 80%;
+    max-height: 100%;
+    z-index: 2;
+    background-color: #ccc;
+
+    a {
+        position: relative;
+        left: 90%;
+        right: 0;
+        top: 0;
+    }
+}
+
+.error {
+    padding: 1rem;
+    background-color: #ff3f34;
+    border: 1px solid #ff1134;
+    text-align: center;
+}
+
+.map {
+    height: 400px;
+    width: 100%;
+}
+
+.slide-in {
+    animation: moveFromRight 0.4s ease both;
+}
+
+@keyframes moveFromRight {
+    from { transform: translateX(100%); }
+}
+
+@keyframes moveToRight {
+    to { transform: translateX(100%); }
+}
