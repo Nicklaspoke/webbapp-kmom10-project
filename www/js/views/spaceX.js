@@ -7,12 +7,11 @@ let spaceX = {
         return [
             m("div.container.slide-in", [
                 m("h1", "What do you wanna see?"),
-                m("button.blue-button", {
+                m("input[type=submit][value=Latest Launch].button.blue-button", {
                     onclick: function() {
                         m.route.set("/spaceX/latest");
-                    },
-                }, "Latest Launch")
-
+                    }
+                }, "Latest Launch"),
             ])
         ];
     }
