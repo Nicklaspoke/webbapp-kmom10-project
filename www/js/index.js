@@ -19,6 +19,9 @@
 
 import m from 'mithril';
 
+import layout from "./views/layout.js";
+import home from "./views/home.js";
+
 var app = {
     // Application Constructor
     initialize: function() {
