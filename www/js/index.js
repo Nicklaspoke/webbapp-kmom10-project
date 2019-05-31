@@ -25,6 +25,8 @@ import login from "./views/login.js";
 import register from "./views/register.js";
 import auth from "./models/auth.js";
 import spaceX from './views/spaceX.js';
+import spaceXLaunchInfo from './views/spaceXLaunchInfo.js';
+import utils from "./utils.js";
 
 
 var app = {
@@ -48,6 +50,15 @@ var app = {
             "/spaceX": {
                 render: function() {
                     return m(layout, m(spaceX))
+                }
+            },
+
+            "/spaceX/:launchId": {
+                render: function(vnode) {
+                    utils.spaceXLaunchId = vnode.attrs.launchId;
+                    console.log(vnode.attrs.launchId);
+                    console.log(utils.spaceXLaunchId);
+                    return m(layout, m(spaceXLaunchInfo));
                 }
             },
 

@@ -8,6 +8,7 @@ let utils = {
     api_key: config.api_key,
     spaceXAPI: "https://api.spacexdata.com/v3",
     issAPI: "http://api.open-notify.org/",
+    spaceXLaunchId: "",
 }
 
 export default utils;
