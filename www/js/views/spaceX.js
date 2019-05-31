@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 import m from 'mithril';
 
@@ -9,13 +9,13 @@ let spaceX = {
                 m("h1", "What do you wanna see?"),
                 m("button.blue-button", {
                     onclick: function() {
-                        m.route.set("/spaceX/latest")
+                        m.route.set("/spaceX/latest");
                     },
                 }, "Latest Launch")
 
             ])
-        ]
+        ];
     }
-}
+};
 
 export default spaceX;

@@ -49,7 +49,7 @@ var app = {
 
             "/spaceX": {
                 render: function() {
-                    return m(layout, m(spaceX))
+                    return m(layout, m(spaceX));
                 }
             },
 
@@ -64,7 +64,7 @@ var app = {
 
             "/login": {
                 render: function() {
-                    return m(layout, m(login))
+                    return m(layout, m(login));
                 }
             },
 

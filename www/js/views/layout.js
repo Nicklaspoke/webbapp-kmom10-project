@@ -21,7 +21,7 @@ let layout = {
             m("nav.bottom-nav",
                 m("span", [
                     m("a", { href: "/", oncreate: m.route.link }, [
-                        m("i.fas.fa-home.fa-2x",)
+                        m("i.fas.fa-home.fa-2x")
                     ], "Home")
                 ]),
 

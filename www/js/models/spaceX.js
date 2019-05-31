@@ -8,6 +8,6 @@ let spaceXModel = {
     load: function() {
 
     }
-}
+};
 
 export default spaceXModel;

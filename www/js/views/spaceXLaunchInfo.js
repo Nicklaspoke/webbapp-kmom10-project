@@ -12,6 +12,6 @@ let spaceXLaunchInfo = {
     view: function() {
 
     }
-}
+};
 
 export default spaceXLaunchInfo;

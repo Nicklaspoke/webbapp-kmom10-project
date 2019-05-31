@@ -18,6 +18,6 @@ let loggedInNav = {
             ]),
         ];
     }
-}
+};
 
 export default loggedInNav;

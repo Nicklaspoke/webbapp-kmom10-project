@@ -10,6 +10,6 @@ let loginButton = {
             ], "Login")
         ]);
     }
-}
+};
 
 export default loginButton;
