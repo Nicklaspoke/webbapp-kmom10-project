@@ -118,3 +118,6 @@ typings/
 .history
 
 # End of https://www.gitignore.io/api/node,sass,cordova,visualstudiocode
+
+#Self defined ignores for the project
+config.json

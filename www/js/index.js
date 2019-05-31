@@ -21,6 +21,7 @@ import m from 'mithril';
 
 import layout from "./views/layout.js";
 import home from "./views/home.js";
+import utils from "./utils.js";
 
 var app = {
     // Application Constructor
@@ -36,6 +37,7 @@ var app = {
         m.route(document.body, "/", {
             "/": {
                 render: function() {
+                    console.log(utils.api_key);
                     return m(layout, m(home));
                 }
             },
