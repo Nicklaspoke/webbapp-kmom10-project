@@ -22,7 +22,6 @@ import m from 'mithril';
 import layout from "./views/layout.js";
 import home from "./views/home.js";
 import login from "./views/login.js";
-import auth from "./models/auth.js";
 
 
 var app = {
