@@ -36,8 +36,8 @@ var app = {
                     return m(layout, m(home));
                 }
             },
-        }
-    }
+        });
+    },
 };
 
 app.initialize();
