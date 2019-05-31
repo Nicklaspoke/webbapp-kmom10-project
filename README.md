@@ -1,11 +1,11 @@
 
-##About this project
+## About this project
 
 This is my final project in the course "Webbapplikationer för mobila enheter" that i'm taking at [BTH](https://bth.se) as a part of the program "Webprogramering"
 
 The main part of the project is to implement 2 open APIs into a mobile webbaplication.
 
-###APIs
+### APIs
 
 For the project i have choosen to implement to open APIs i focoused around space and rockets:
 
@@ -17,7 +17,7 @@ The Second API i have choosen to implement is the public API for tracking the IS
 
 * [ISS Location](http://open-notify.org/Open-Notify-API/)
 
-##Use of this app
+## Use of this app
 
 This app is for the one who is inserested in space and rockets.
 
