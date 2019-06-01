@@ -4,11 +4,6 @@
     margin-top: 2rem;
 }
 
-.deliveryContainer {
-    margin-top: 0.2rem;
-    border-top: 0.1rem solid #333;
-}
-
 .dropdown-menu {
     width: 100%;
     padding: 0.6rem 0.6rem;
@@ -42,6 +37,20 @@
 .map {
     height: 400px;
     width: 100%;
+}
+
+.image-right {
+    float: right;
+}
+
+.image-left {
+    float: left;
+}
+
+.image-center {
+    margin: 0.1rem auto;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 .slide-in {
