@@ -459,6 +459,12 @@ p {
   vertical-align: middle;
 }
 
+.space {
+  background-image: url("../img/falcon-heavy-render.png");
+  background-size: cover;
+  opacity: 0.5;
+}
+
 .slide-in {
   animation: moveFromRight 0.4s ease both;
 }

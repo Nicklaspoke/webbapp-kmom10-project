@@ -56,8 +56,6 @@ var app = {
             "/spaceX/:launchId": {
                 render: function(vnode) {
                     utils.spaceXLaunchId = vnode.attrs.launchId;
-                    console.log(vnode.attrs.launchId);
-                    console.log(utils.spaceXLaunchId);
                     return m(layout, m(spaceXLaunchInfo));
                 }
             },

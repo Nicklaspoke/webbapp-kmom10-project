@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "style": "sass style/base.scss www/css/style.min.css",
     "build-js": "webpack -d",
-    "browser": "npm run build-js && cordova run browser",
+    "browser": "npm run build-js && npm run style && cordova run browser",
     "android": "npm run build-js && cordova run android"
   },
   "keywords": [
