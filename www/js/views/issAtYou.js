@@ -24,7 +24,7 @@ let issAtYou = {
         return [
             m("h1", "Next ISS pass over you will be"),
             m("pre", issModel.nextPass),
-        ]
+        ];
     }
 };
 

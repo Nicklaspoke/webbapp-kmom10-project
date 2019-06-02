@@ -13,7 +13,7 @@ let spaceXLaunchInfo = {
         return [
             m("div.container.slide-in", [
                 m("img.image-center",
-                {src: spaceXModel.missonPatch ? spaceXModel.missonPatch : "/img/noimage.png"}),
+                    {src: spaceXModel.missonPatch ? spaceXModel.missonPatch : "/img/noimage.png"}),
                 m("h1", "Flight Number: " + spaceXModel.launchInfo.flight_number),
                 m("h3", "Misson name: " + spaceXModel.launchInfo.mission_name),
                 m("h3", "Launch date: " + spaceXModel.launchInfo.launch_date_local),

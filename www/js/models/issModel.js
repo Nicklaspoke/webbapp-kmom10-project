@@ -14,6 +14,7 @@ let issModel = {
             url: utils.issAPI + "iss-now.json",
         }).then(function(result) {
             let temp = result.iss_position;
+
             issModel.issPosition[0] = temp.latitude;
             issModel.issPosition[1] = temp.longitude;
         });
@@ -21,6 +22,7 @@ let issModel = {
 
     loadNextissPass: function() {
         let passUrl = utils.issAPI + "iss-pass.json";
+
         passUrl += "?lat=" + issModel.currentPosition.latitude;
         passUrl += "&lon=" + issModel.currentPosition.longitude;
         passUrl += "&alt=20&n=1";

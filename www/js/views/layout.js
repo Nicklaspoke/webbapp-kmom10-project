@@ -37,7 +37,8 @@ let layout = {
                 //     ], "Login")
                 // ]),
 
-                auth.token ? m(loggedInNav) : m(loginButton),
+                // auth.token ? m(loggedInNav) : m(loginButton),
+                m(loggedInNav)
             ),
         ];
     }

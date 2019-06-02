@@ -10,7 +10,8 @@ import "leaflet/dist/images/marker-shadow.png";
 import issModel from '../models/issModel';
 
 var map;
-
+var iss;
+var isscirc;
 
 var locationMarker = L.icon({
     iconUrl: 'location.png',
@@ -28,19 +29,21 @@ var issIcon = L.icon({
     shadowUrl: 'ISSIcon_shadow.png',
     shadowSize: [60, 40],
     shadowAnchor: [30, 15]
-})
+});
 
 function showMap() {
-    map = L.map('map').setView([56.181932, 15.590525], 13);
+    map = L.map('map').setView([56.181932, 15.590525], 2);
 
-    // iss = L.marker([0, 0], {icon: issIcon}).addTo(map);
-    // isscirc = L.circle([0,0], 2200e3, {color: "#c22", opacity: 0.3, weight:1, fillColor: "#c22", fillOpacity: 0.1}).addTo(map);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',    {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 4,
         attribution: `&copy;
         <a href="https://www.openstreetmap.org/copyright">
         OpenStreetMap</a> contributors`
     }).addTo(map);
+
+    iss = L.marker([0, 0], {icon: issIcon}).addTo(map);
+    isscirc = L.circle([0, 0], 2200e3, {color: "#c22", opacity: 0.3, weight: 1, fillColor: "#c22",
+        fillOpacity: 0.1}).addTo(map).bindPopup("ISS Current Position");
 }
 
 function showPosition() {
@@ -53,17 +56,15 @@ function showPosition() {
 }
 
 function renderMarker() {
-    var issLat = issModel.issPosition.latitude;
-    var issLon = issModel.issPosition.longitude;
+    var issLat = issModel.issPosition[0];
+    var issLon = issModel.issPosition[1];
 
     console.log(issModel.issPosition);
 
-    L.marker([0, 0], {icon: issIcon}).addTo(map);
-    map.setView(L.latLng(issLat, issLon));
-    L.circle([issLat,issLon], 2200e3, {color: "#c22", opacity: 0.3, weight:1, fillColor: "#c22", fillOpacity: 0.1}).addTo(map);
+    iss.setLatLng([issLat, issLon]);
+    isscirc.setLatLng([issLat, issLon]);
 
-    // iss.setLatLng([issLat, issLon]);
-    // isscirc.setLatLng([issLat, issLon]);
+    map.panTo(L.latLng(issLat, issLon));
 }
 
 
@@ -73,12 +74,18 @@ let issTracker = {
         issModel.loadissPositon();
         issModel.getPosition();
     },
-    oncreate: showMap,
+    oncreate: function() {
+        showMap();
+    },
     view: function() {
-        console.log(issModel.issPosition);
+        // console.log(issModel.issPosition);
 
         if (issModel.issPosition.length > 0) {
-            renderMarker();
+            setTimeout(function() {
+                issModel.loadissPositon();
+                renderMarker();
+            }, 5000);
+            // renderMarker();
         }
         showPosition();
         return [
