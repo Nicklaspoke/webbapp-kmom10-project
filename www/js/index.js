@@ -23,10 +23,12 @@ import layout from "./views/layout.js";
 import home from "./views/home.js";
 import login from "./views/login.js";
 import register from "./views/register.js";
-import auth from "./models/auth.js";
 import spaceX from './views/spaceX.js';
 import spaceXLaunchInfo from './views/spaceXLaunchInfo.js';
+import issAtYou from './views/issAtYou.js';
 import utils from "./utils.js";
+import auth from "./models/auth.js";
+import issTracker from './views/issTracker.js';
 
 
 var app = {
@@ -57,6 +59,20 @@ var app = {
                 render: function(vnode) {
                     utils.spaceXLaunchId = vnode.attrs.launchId;
                     return m(layout, m(spaceXLaunchInfo));
+                }
+            },
+
+            "/issPass": {
+                render: function() {
+                    console.log("/issPass");
+                    return m(layout, m(issAtYou));
+                }
+            },
+
+            "/issPos": {
+                render: function() {
+                    console.log("/issPoss");
+                    return m(layout, m(issTracker));
                 }
             },
 
