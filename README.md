@@ -9,11 +9,11 @@ The main part of the project is to implement 2 open APIs into a mobile webbaplic
 
 For the project i have choosen to implement to open APIs i focoused around space and rockets:
 
-The first API i have chhosen is the Public API for SpaceX where you can get information about past and upcomming missons they will do/have done
+The first API i have chosen is the Public API for SpaceX where you can get information about past and upcomming missons they will do/have done
 
 * [SpaceX](https://github.com/r-spacex/SpaceX-API)
 
-The Second API i have choosen to implement is the public API for tracking the ISS(International Space Station), where you can get the current position of the sapce station. As well as with your own coordinates see the next time it will pass over you.
+The Second API i have choosen to implement is the public API for tracking the ISS(International Space Station), where you can get the current position of the sapce station. As well as getting a list of everyone who is living on the space station.
 
 * [ISS Location](http://open-notify.org/Open-Notify-API/)
 
@@ -22,7 +22,7 @@ The Second API i have choosen to implement is the public API for tracking the IS
 This app is for the one who is inserested in space and rockets.
 
 You can use it to get information about previous and upcomming spaceX launches.
-As well as track the ISS and see when it will pass over your position.
+As well as track the ISS and see who is living on it.
 
 ## Architecture
 
