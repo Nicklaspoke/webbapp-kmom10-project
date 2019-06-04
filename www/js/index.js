@@ -73,13 +73,21 @@ var app = {
 
             "/issPeople": {
                 render: function() {
-                    return m(layout, m(peopleInSpace));
+                    if (auth.token) {
+                        return m(layout, m(peopleInSpace));
+                    }
+
+                    return m.route.set("/login");
                 }
             },
 
             "/issPos": {
                 render: function() {
-                    return m(layout, m(issTracker));
+                    if (auth.token) {
+                        return m(layout, m(issTracker));
+                    }
+
+                    return m.route.set("/login");
                 }
             },
 

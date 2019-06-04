@@ -29,7 +29,6 @@ let issModel = {
             url: astroUrl
         }).then(function(result) {
             issModel.peopleInSpace = result.people;
-            console.log(issModel.peopleInSpace);
         }).catch(function(e) {
             issModel.errorMsg = e.message;
         });
