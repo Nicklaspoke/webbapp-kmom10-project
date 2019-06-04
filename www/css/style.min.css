@@ -382,6 +382,7 @@ p {
 }
 .top-nav .right-link {
   float: right;
+  color: #333;
 }
 
 .bottom-nav a,
