@@ -378,6 +378,7 @@ p {
   background: #3986B7;
   text-align: center;
   box-sizing: border-box;
+  z-index: 5;
 }
 .top-nav .right-link {
   float: right;
@@ -416,13 +417,10 @@ p {
 }
 
 .listContainer {
-  width: 100vw;
-  position: relative;
-  margin-left: -50vw;
-  height: 200px;
+  width: 100%;
+  height: 225px;
   margin-top: 10px;
   line-break: auto;
-  left: 50%;
   border-bottom: 0.1rem solid #3986B7;
   overflow-x: hidden;
 }

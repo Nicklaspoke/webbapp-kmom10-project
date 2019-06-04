@@ -9,13 +9,13 @@
 }
 
 .listContainer {
-    width: 100vw;
-    position: relative;
-    margin-left: -50vw;
-    height: 200px;
+    width: 100%;
+    // position: relative;
+    // margin-left: -50vw;
+    height: 225px;
     margin-top: 10px;
     line-break: auto;
-    left: 50%;
+    // left: 50%;
     border-bottom: 0.1rem solid #3986B7;
     overflow-x: hidden;
 }
