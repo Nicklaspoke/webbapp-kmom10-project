@@ -32,7 +32,7 @@ let issModel = {
             console.log(issModel.peopleInSpace);
         }).catch(function(e) {
             issModel.errorMsg = e.message;
-        })
+        });
     },
 
     getPosition: function() {

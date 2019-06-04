@@ -8,11 +8,13 @@ let spaceXList = {
     view: function() {
         return [
             m("div.container.slide-in", [
-                    spaceXModel.listInfoBase.length > 0 ?
+                spaceXModel.listInfoBase.length > 0 ?
                     spaceXModel.listInfoBase.map(function(launch) {
-                        let missionPatch = launch.links.mission_patch ? launch.links.mission_patch : "/img/noimage.png";
+                        let missionPatch = launch.links.mission_patch ? launch.links.mission_patch
+                            : "/img/noimage.png";
                         let rocketName = launch.rocket.rocket_name;
                         let detailsLink = "/spaceX/" + launch.flight_number;
+
                         return m("div.listContainer.slide-in", [
                             m("a", { href: detailsLink, oncreate: m.route.link }, [
                                 m("img.thumb.image-left", {src: missionPatch}),

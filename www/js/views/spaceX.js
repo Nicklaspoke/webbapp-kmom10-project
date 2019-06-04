@@ -1,7 +1,6 @@
 "use strict";
 
 import m from 'mithril';
-import spaceXModel from '../models/spaceX';
 
 let spaceX = {
     optionArray: [],
@@ -21,13 +20,15 @@ let spaceX = {
                     }
                 }, "Latest Launch"),
 
-                m("input[type=submit][value=Upcoming Launches].button.space-button.full-width-button", {
+                m(`input[type=submit][value=Upcoming Launches]
+                    .button.space-button.full-width-button`, {
                     onclick: function() {
                         m.route.set("/spaceXList/upcoming");
                     }
                 }, "Upcoming Launches"),
 
-                m("input[type=submit][value=Browse All Launches].button.space-button.full-width-button", {
+                m(`input[type=submit][value=Browse All Launches]
+                    .button.space-button.full-width-button`, {
                     onclick: function() {
                         m.route.set("/spaceXList/all");
                     }

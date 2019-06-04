@@ -76,13 +76,11 @@ let issTracker = {
         showMap();
     },
     view: function() {
-
         if (issModel.issPosition.length > 0) {
             setTimeout(function() {
                 issModel.loadissPositon();
                 renderMarker();
             }, 5000);
-            // renderMarker();
         }
         showPosition();
         return [

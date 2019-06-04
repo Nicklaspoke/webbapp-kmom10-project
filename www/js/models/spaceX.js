@@ -47,13 +47,11 @@ let spaceXModel = {
     },
 
     loadLaunchType: function() {
-
         if (utils.spaceXLaunchType === "all") {
             m.request({
                 method: "GET",
                 url: utils.spaceXAPI + "/launches/",
             }).then(function(result) {
-                console.log(result);
                 spaceXModel.listInfoBase = result;
             });
         } else {
@@ -61,7 +59,6 @@ let spaceXModel = {
                 method: "GET",
                 url: utils.spaceXAPI + "/launches/" + utils.spaceXLaunchType,
             }).then(function(result) {
-                console.log(result);
                 spaceXModel.listInfoBase = result;
             });
         }
