@@ -10,6 +10,9 @@ let spaceXModel = {
     launchInfo: {},
     missonPatch: "",
     rocketName: "",
+    listInfoBase: {},
+    listInfoMissionPatch: "",
+    listInfoRocketName: "",
 
     reset: function() {
         spaceXModel.selectedLaunchId = 0;
@@ -41,6 +44,27 @@ let spaceXModel = {
                 spaceXModel.rocketName = spaceXModel.launchInfo.rocket.rocket_name;
             }
         });
+    },
+
+    loadLaunchType: function() {
+
+        if (utils.spaceXLaunchType === "all") {
+            m.request({
+                method: "GET",
+                url: utils.spaceXAPI + "/launches/",
+            }).then(function(result) {
+                console.log(result);
+                spaceXModel.listInfoBase = result;
+            });
+        } else {
+            m.request({
+                method: "GET",
+                url: utils.spaceXAPI + "/launches/" + utils.spaceXLaunchType,
+            }).then(function(result) {
+                console.log(result);
+                spaceXModel.listInfoBase = result;
+            });
+        }
     }
 };
 

@@ -18,7 +18,8 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
-        <allow-intent href="market:*" />
+        <access origin="*" />
+
         <icon density="hdpi" src="res/icon/android/mipmap-hdpi/ic_launcher.png" />
         <icon density="hdpi" src="res/icon/android/mipmap-hdpi/ic_launcher.png" />
         <icon density="mdpi" src="res/icon/android/mipmap-mdpi/ic_launcher.png" />
@@ -41,10 +42,6 @@
         <splash density="land-xxxhdpi" src="res/screen/android/splash-land-xxxhdpi.png" />
     </platform>
 
-    <platform name="browser">
-        <preference name="ShowSplashScreen" value="true"/>
-        <preference name="SplashScreen" value="www/res/web_hi_res_512.png"/>
-    </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />

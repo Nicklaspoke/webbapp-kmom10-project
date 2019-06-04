@@ -29,6 +29,7 @@ import peopleInSpace from './views/peopleInSpace.js';
 import utils from "./utils.js";
 import auth from "./models/auth.js";
 import issTracker from './views/issTracker.js';
+import spaceXList from './views/spaceXList.js';
 
 
 var app = {
@@ -62,16 +63,22 @@ var app = {
                 }
             },
 
+            "/spaceXList/:launchType": {
+                render: function(vnode) {
+                    utils.spaceXLaunchType = vnode.attrs.launchType;
+
+                    return m(layout, m(spaceXList));
+                }
+            },
+
             "/issPeople": {
                 render: function() {
-                    console.log("/issPeople");
                     return m(layout, m(peopleInSpace));
                 }
             },
 
             "/issPos": {
                 render: function() {
-                    console.log("/issPoss");
                     return m(layout, m(issTracker));
                 }
             },

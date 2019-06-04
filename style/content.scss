@@ -4,10 +4,38 @@
     margin-top: 2rem;
 }
 
+.person-container {
+    border-top: 1px solid #3986B7;
+}
+
+.listContainer {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    height: 200px;
+    margin-top: 10px;
+    line-break: auto;
+    left: 50%;
+    border-bottom: 0.1rem solid #3986B7;
+    overflow-x: hidden;
+}
+
+.listContainer h4 {
+    margin-right: 0.1rem;
+    margin-left: 0.1rem;
+}
+
+.thumb {
+    max-width: 100px;
+    max-height: 200px;
+    // margin-right: 1rem;
+}
+
 .dropdown-menu {
     width: 100%;
     padding: 0.6rem 0.6rem;
-    background-color: #ddd;
+    background-color: #FEFED8;
+    background-image: linear-gradient(#FEFED8, #EEC0A3);
 }
 
 .modal {
@@ -51,12 +79,6 @@
     margin: 0.1rem auto;
     max-width: 100%;
     vertical-align: middle;
-}
-
-.space {
-    background-image: url("../img/falcon-heavy-render.png");
-    background-size: cover;
-    opacity: 0.5;
 }
 
 .slide-in {

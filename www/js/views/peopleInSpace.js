@@ -15,11 +15,14 @@ let issAtYou = {
                 m("h1", "Current Persons Living in space"),
                 issModel.peopleInSpace.length > 0 ?
                     issModel.peopleInSpace.map(function(person) {
-                        return m("div", [
-                            m("p", "Space Caft: ", person.craft, "\n", "Name: ", person.name)
+                        return m("div.person-container", [
+                            m("p", "Space Caft: ", person.craft, [
+                                m("p", "Name: ", person.name)
+                            ])
                         ]);
                     })
-                    : m("h2", "There are currently no one space")
+                    : m("h2", "There are currently no one in space")
+                    // : m("h2", issModel.errorMsg),
             ])
         ];
     }

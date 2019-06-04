@@ -59,8 +59,6 @@ function renderMarker() {
     var issLat = issModel.issPosition[0];
     var issLon = issModel.issPosition[1];
 
-    console.log(issModel.issPosition);
-
     iss.setLatLng([issLat, issLon]);
     isscirc.setLatLng([issLat, issLon]);
 
@@ -78,7 +76,6 @@ let issTracker = {
         showMap();
     },
     view: function() {
-        // console.log(issModel.issPosition);
 
         if (issModel.issPosition.length > 0) {
             setTimeout(function() {

@@ -7,6 +7,7 @@ let issModel = {
     currentPosition: {},
     peopleInSpace: {},
     issPosition: [],
+    errorMsg: "",
 
     loadissPositon: function() {
         m.request({
@@ -29,6 +30,8 @@ let issModel = {
         }).then(function(result) {
             issModel.peopleInSpace = result.people;
             console.log(issModel.peopleInSpace);
+        }).catch(function(e) {
+            issModel.errorMsg = e.message;
         })
     },
 

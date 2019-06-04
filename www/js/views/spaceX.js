@@ -7,8 +7,8 @@ let spaceX = {
     optionArray: [],
 
     oncreate: function() {
-        spaceXModel.getLatestLaunchId();
-        spaceXModel.reset();
+        // spaceXModel.getLatestLaunchId();
+        // spaceXModel.reset();
     },
 
     view: function() {
@@ -27,11 +27,11 @@ let spaceX = {
                     }
                 }, "Latest Launch"),
 
-                m("input[type=submit][value=Upcoming Launch].button.space-button.full-width-button", {
+                m("input[type=submit][value=Upcoming Launches].button.space-button.full-width-button", {
                     onclick: function() {
-                        m.route.set("/spaceX/upcoming");
+                        m.route.set("/spaceXList/upcoming");
                     }
-                }, "Next Upcoming Launch"),
+                }, "Upcoming Launches"),
                 m("form", {
                     onsubmit: function() {
                         event.preventDefault();
@@ -48,13 +48,18 @@ let spaceX = {
                             console.log(spaceXModel.selectedLaunchId);
                         },
                     }, [
-                        m("option", "Select a launch"),
+                        m("option.dropdown-menu", "Select a launch"),
                         spaceX.optionArray.map(function(launchId) {
                             return m("option", {value: launchId}, launchId);
                         }),
                     ]),
                     m("input[type=submit][value=Get Launch Info].button.space-button.full-width-button", "Get Launch Info")
-                ])
+                ]),
+                m("input[type=submit][value=Browse All Launches].button.space-button.full-width-button", {
+                    onclick: function() {
+                        m.route.set("/spaceXList/all");
+                    }
+                }, "Upcoming Launches"),
             ])
         ];
     }

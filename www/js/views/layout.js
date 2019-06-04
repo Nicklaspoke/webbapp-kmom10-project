@@ -31,14 +31,7 @@ let layout = {
                     ], "SpaceX Launches")
                 ]),
 
-                // m("span", [
-                //     m("a", { href: "/login", oncreate: m.route.link }, [
-                //         m("i.fas.fa-sign-in-alt.fa-2x")
-                //     ], "Login")
-                // ]),
-
-                // auth.token ? m(loggedInNav) : m(loginButton),
-                m(loggedInNav)
+                auth.token ? m(loggedInNav) : m(loginButton),
             ),
         ];
     }
