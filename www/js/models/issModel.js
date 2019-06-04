@@ -5,7 +5,7 @@ import utils from "../utils";
 
 let issModel = {
     currentPosition: {},
-    nextPass: {},
+    peopleInSpace: {},
     issPosition: [],
 
     loadissPositon: function() {
@@ -20,20 +20,16 @@ let issModel = {
         });
     },
 
-    loadNextissPass: function() {
-        let passUrl = utils.issAPI + "iss-pass.json";
+    loadPeopleInSpace: function() {
+        let astroUrl = utils.issAPI + "astros.json";
 
-        passUrl += "?lat=" + issModel.currentPosition.latitude;
-        passUrl += "&lon=" + issModel.currentPosition.longitude;
-        passUrl += "&alt=20&n=1";
-        console.log(passUrl);
         m.request({
             method: "GET",
-            url: passUrl,
+            url: astroUrl
         }).then(function(result) {
-            console.log(result);
-            issModel.nextPass = result;
-        });
+            issModel.peopleInSpace = result.people;
+            console.log(issModel.peopleInSpace);
+        })
     },
 
     getPosition: function() {

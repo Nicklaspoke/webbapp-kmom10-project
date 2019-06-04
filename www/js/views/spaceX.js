@@ -21,13 +21,13 @@ let spaceX = {
         return [
             m("div.container.slide-in", [
                 m("h1", "What do you wanna see?"),
-                m("input[type=submit][value=Latest Launch].button.blue-button.full-width-button", {
+                m("input[type=submit][value=Latest Launch].button.space-button.full-width-button", {
                     onclick: function() {
                         m.route.set("/spaceX/latest");
                     }
                 }, "Latest Launch"),
 
-                m("input[type=submit][value=Upcoming Launch].button.blue-button.full-width-button", {
+                m("input[type=submit][value=Upcoming Launch].button.space-button.full-width-button", {
                     onclick: function() {
                         m.route.set("/spaceX/upcoming");
                     }
@@ -53,7 +53,7 @@ let spaceX = {
                             return m("option", {value: launchId}, launchId);
                         }),
                     ]),
-                    m("input[type=submit][value=Get Launch Info].button.blue-button.full-width-button", "Get Launch Info")
+                    m("input[type=submit][value=Get Launch Info].button.space-button.full-width-button", "Get Launch Info")
                 ])
             ])
         ];

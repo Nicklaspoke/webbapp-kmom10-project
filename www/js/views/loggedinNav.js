@@ -12,9 +12,9 @@ let loggedInNav = {
             ]),
 
             m("span", [
-                m("a", { href: "/issPass", oncreate: m.route.link }, [
+                m("a", { href: "/issPeople", oncreate: m.route.link }, [
                     m("i.fas.fa-satellite.fa-2x")
-                ], "When Will ISS Pass Over Me")
+                ], "Who Is In Space?")
             ]),
         ];
     }

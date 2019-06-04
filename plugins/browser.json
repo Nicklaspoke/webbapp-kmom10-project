@@ -12,6 +12,9 @@
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "se.dbwebb.spaceApp"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "se.dbwebb.spaceApp"
     }
   },
   "dependent_plugins": {}

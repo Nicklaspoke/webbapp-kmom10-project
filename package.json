@@ -20,6 +20,7 @@
     "cordova-android": "^8.0.0",
     "cordova-browser": "^6.0.0",
     "cordova-plugin-geolocation": "^4.0.1",
+    "cordova-plugin-splashscreen": "5.0.2",
     "leaflet": "^1.5.1",
     "leaflet-geosearch": "^2.7.0",
     "mithril": "^2.0.0-rc.4"
@@ -36,7 +37,8 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-geolocation": {}
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-splashscreen": {}
     },
     "platforms": [
       "browser",

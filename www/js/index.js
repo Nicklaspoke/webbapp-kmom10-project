@@ -25,7 +25,7 @@ import login from "./views/login.js";
 import register from "./views/register.js";
 import spaceX from './views/spaceX.js';
 import spaceXLaunchInfo from './views/spaceXLaunchInfo.js';
-import issAtYou from './views/issAtYou.js';
+import peopleInSpace from './views/peopleInSpace.js';
 import utils from "./utils.js";
 import auth from "./models/auth.js";
 import issTracker from './views/issTracker.js';
@@ -62,10 +62,10 @@ var app = {
                 }
             },
 
-            "/issPass": {
+            "/issPeople": {
                 render: function() {
-                    console.log("/issPass");
-                    return m(layout, m(issAtYou));
+                    console.log("/issPeople");
+                    return m(layout, m(peopleInSpace));
                 }
             },
 
